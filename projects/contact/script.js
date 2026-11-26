@@ -122,7 +122,7 @@ const formMessage = document.getElementById("form-message");
 const submitButton = document.getElementById("submit-button");
 
 // Your CreativeWeb WhatsApp number
-const whatsappNumber = "947148903387";
+const whatsappNumber = "94714890387";
 
 if (projectForm) {
 
