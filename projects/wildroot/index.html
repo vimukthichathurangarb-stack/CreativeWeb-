@@ -1,0 +1,664 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#10251d">
+    <meta name="description" content="WILDROOT — An interactive journey through the living world.">
+
+    <title>WILDROOT — Into the Living World</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- LOADING / PROGRESS -->
+
+    <div class="page-progress"></div>
+
+    <!-- NAVIGATION -->
+
+    <header class="header">
+
+        <a href="#home" class="logo">
+            WILD<span>ROOT</span>
+            <small>INTO THE LIVING WORLD</small>
+        </a>
+
+        <nav class="nav">
+            <a href="#ecosystems">Ecosystems</a>
+            <a href="#atlas">Wild Atlas</a>
+            <a href="#encounters">Encounters</a>
+            <a href="#mission">Our Mission</a>
+        </nav>
+
+        <a href="#explore" class="nav-action">
+            Explore the unknown <span>↗</span>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle"
+            aria-label="Open navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <a href="#ecosystems">Ecosystems</a>
+            <a href="#atlas">Wild Atlas</a>
+            <a href="#encounters">Encounters</a>
+            <a href="#mission">Our Mission</a>
+            <a href="#explore">Explore the unknown ↗</a>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- 01 — CINEMATIC OPENING -->
+
+        <section class="opening" id="home">
+
+            <div class="opening-image"></div>
+            <div class="opening-shade"></div>
+
+            <div class="opening-topline">
+                <span>FIELD NOTES / 001</span>
+                <span>EARTH · OUR ONLY HOME</span>
+            </div>
+
+            <div class="opening-content">
+
+                <p class="eyebrow">
+                    <span class="pulse-dot"></span>
+                    THERE IS MORE OUT THERE
+                </p>
+
+                <h1>
+                    The world<br>
+                    is still <em>wild.</em>
+                </h1>
+
+                <p class="opening-description">
+                    Step beyond the familiar. Enter a world
+                    of ancient forests, untamed rivers and
+                    extraordinary life.
+                </p>
+
+                <a href="#ecosystems" class="opening-button">
+                    BEGIN EXPLORATION
+                    <span>↓</span>
+                </a>
+
+            </div>
+
+            <div class="opening-coordinate">
+                <span>01° 17' N</span>
+                <span>103° 51' E</span>
+                <small>THE LIVING PLANET</small>
+            </div>
+
+            <div class="opening-bottom">
+                <span>SCROLL TO ENTER</span>
+                <div class="scroll-line"></div>
+                <span>01 / 05</span>
+            </div>
+
+            <div class="opening-side-text">
+                EXPLORE · OBSERVE · PROTECT
+            </div>
+
+        </section>
+
+
+        <!-- 02 — ECOSYSTEM SELECTOR -->
+
+        <section class="ecosystems" id="ecosystems">
+
+            <div class="ecosystem-intro">
+
+                <div class="section-index">
+                    <span>01</span>
+                    <span>CHOOSE YOUR WORLD</span>
+                </div>
+
+                <h2>
+                    Four worlds.<br>
+                    <em>One living planet.</em>
+                </h2>
+
+                <p>
+                    Every ecosystem has its own language.
+                    Choose a world and discover what makes it alive.
+                </p>
+
+            </div>
+
+            <div class="ecosystem-explorer">
+
+                <div class="ecosystem-visual" id="ecosystem-visual">
+
+                    <div class="ecosystem-overlay"></div>
+
+                    <div class="ecosystem-visual-top">
+                        <span>LIVE ENVIRONMENT VIEW</span>
+                        <span id="ecosystem-number">01 / 04</span>
+                    </div>
+
+                    <div class="ecosystem-visual-bottom">
+                        <p id="ecosystem-category">THE GREEN WORLD</p>
+                        <h3 id="ecosystem-title">The Forest</h3>
+                        <p id="ecosystem-description">
+                            Where ancient trees create entire worlds.
+                        </p>
+                    </div>
+
+                    <div class="ecosystem-symbol" id="ecosystem-symbol">
+                        01
+                    </div>
+
+                </div>
+
+                <div class="ecosystem-selector">
+
+                    <p class="selector-label">SELECT AN ECOSYSTEM</p>
+
+                    <button class="ecosystem-option active"
+                        data-ecosystem="forest">
+
+                        <span>01</span>
+                        <strong>Forest</strong>
+                        <span class="option-arrow">↗</span>
+
+                    </button>
+
+                    <button class="ecosystem-option"
+                        data-ecosystem="water">
+
+                        <span>02</span>
+                        <strong>Water</strong>
+                        <span class="option-arrow">↗</span>
+
+                    </button>
+
+                    <button class="ecosystem-option"
+                        data-ecosystem="mountains">
+
+                        <span>03</span>
+                        <strong>Mountains</strong>
+                        <span class="option-arrow">↗</span>
+
+                    </button>
+
+                    <button class="ecosystem-option"
+                        data-ecosystem="wildlife">
+
+                        <span>04</span>
+                        <strong>Wildlife</strong>
+                        <span class="option-arrow">↗</span>
+
+                    </button>
+
+                    <div class="selector-note">
+                        <span class="pulse-dot"></span>
+                        SELECT TO CHANGE ENVIRONMENT
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 03 — INTERACTIVE WILD ATLAS -->
+
+        <section class="atlas" id="atlas">
+
+            <div class="atlas-heading">
+
+                <div class="section-index">
+                    <span>02</span>
+                    <span>THE WILD ATLAS</span>
+                </div>
+
+                <h2>
+                    A planet full<br>
+                    of <em>possibilities.</em>
+                </h2>
+
+                <p>
+                    Our planet is a collection of extraordinary
+                    habitats. Select a location to discover its
+                    natural character.
+                </p>
+
+            </div>
+
+            <div class="atlas-interface">
+
+                <div class="atlas-map">
+
+                    <div class="map-grid"></div>
+
+                    <div class="map-decoration map-circle-one"></div>
+                    <div class="map-decoration map-circle-two"></div>
+
+                    <div class="map-label map-label-one">ASIA</div>
+                    <div class="map-label map-label-two">AFRICA</div>
+                    <div class="map-label map-label-three">SOUTH AMERICA</div>
+                    <div class="map-label map-label-four">OCEANIA</div>
+
+                    <button class="map-point point-amazon active"
+                        data-place="amazon" aria-label="Explore Amazon rainforest">
+                        <span></span>
+                        <small>AMAZON</small>
+                    </button>
+
+                    <button class="map-point point-congo"
+                        data-place="congo" aria-label="Explore Congo rainforest">
+                        <span></span>
+                        <small>CONGO</small>
+                    </button>
+
+                    <button class="map-point point-sinharaja"
+                        data-place="sinharaja" aria-label="Explore Sinharaja">
+                        <span></span>
+                        <small>SINHARAJA</small>
+                    </button>
+
+                    <button class="map-point point-galapagos"
+                        data-place="galapagos" aria-label="Explore Galapagos">
+                        <span></span>
+                        <small>GALÁPAGOS</small>
+                    </button>
+
+                    <div class="map-caption">
+                        <span>FIELD LOCATION SELECTOR</span>
+                        <span>04 DISCOVERY POINTS</span>
+                    </div>
+
+                </div>
+
+                <div class="atlas-detail">
+
+                    <p class="atlas-detail-label">
+                        SELECTED FIELD LOCATION
+                    </p>
+
+                    <span class="atlas-detail-number" id="atlas-number">
+                        01 / 04
+                    </span>
+
+                    <h3 id="atlas-title">Amazon Rainforest</h3>
+
+                    <p id="atlas-description">
+                        A vast tropical ecosystem known for its
+                        extraordinary biodiversity and immense
+                        network of rivers.
+                    </p>
+
+                    <div class="atlas-facts">
+
+                        <div>
+                            <span>HABITAT</span>
+                            <strong id="atlas-habitat">Tropical forest</strong>
+                        </div>
+
+                        <div>
+                            <span>REGION</span>
+                            <strong id="atlas-region">South America</strong>
+                        </div>
+
+                    </div>
+
+                    <div class="atlas-navigation">
+                        <button id="atlas-prev" aria-label="Previous location">←</button>
+                        <div class="atlas-progress">
+                            <span id="atlas-progress-bar"></span>
+                        </div>
+                        <button id="atlas-next" aria-label="Next location">→</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 04 — SCROLLING NATURE STORY -->
+
+        <section class="story" id="story">
+
+            <div class="story-sticky">
+
+                <div class="story-image story-image-one"></div>
+                <div class="story-image story-image-two"></div>
+                <div class="story-image story-image-three"></div>
+
+                <div class="story-image-shade"></div>
+
+                <div class="story-sticky-label">
+                    A JOURNEY THROUGH TIME
+                </div>
+
+                <div class="story-sticky-number" id="story-number">
+                    01
+                </div>
+
+            </div>
+
+            <div class="story-content">
+
+                <article class="story-chapter" data-chapter="01">
+
+                    <span>CHAPTER 01 / THE BEGINNING</span>
+
+                    <h2>
+                        Before us,<br>
+                        <em>there was life.</em>
+                    </h2>
+
+                    <p>
+                        For millions of years, forests have grown,
+                        rivers have travelled, and life has evolved
+                        in countless extraordinary forms.
+                    </p>
+
+                </article>
+
+                <article class="story-chapter" data-chapter="02">
+
+                    <span>CHAPTER 02 / THE CONNECTION</span>
+
+                    <h2>
+                        Everything<br>
+                        is <em>connected.</em>
+                    </h2>
+
+                    <p>
+                        Water feeds the forest. Forests protect
+                        the soil. Animals carry seeds. Every living
+                        thing plays a part in a greater system.
+                    </p>
+
+                </article>
+
+                <article class="story-chapter" data-chapter="03">
+
+                    <span>CHAPTER 03 / THE FUTURE</span>
+
+                    <h2>
+                        What happens<br>
+                        <em>next is ours.</em>
+                    </h2>
+
+                    <p>
+                        The choices made today will influence
+                        the natural world that future generations
+                        will inherit.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- 05 — WILDLIFE ENCOUNTERS -->
+
+        <section class="encounters" id="encounters">
+
+            <div class="encounters-heading">
+
+                <div class="section-index">
+                    <span>03</span>
+                    <span>WILDLIFE ENCOUNTERS</span>
+                </div>
+
+                <h2>
+                    Meet the<br>
+                    <em>extraordinary.</em>
+                </h2>
+
+                <p>
+                    Every species has a role in the natural world.
+                    Discover a few remarkable inhabitants of our planet.
+                </p>
+
+            </div>
+
+            <div class="wildlife-explorer">
+
+                <div class="wildlife-feature" id="wildlife-feature">
+
+                    <div class="wildlife-feature-image"></div>
+
+                    <div class="wildlife-feature-overlay"></div>
+
+                    <div class="wildlife-feature-content">
+
+                        <span id="animal-category">
+                            THE FOREST GIANT
+                        </span>
+
+                        <h3 id="animal-name">
+                            Asian Elephant
+                        </h3>
+
+                        <p id="animal-description">
+                            An intelligent and social giant,
+                            shaping the landscapes it moves through.
+                        </p>
+
+                        <div class="animal-tags">
+                            <span id="animal-habitat">FORESTS & GRASSLANDS</span>
+                            <span id="animal-status">ENDANGERED</span>
+                        </div>
+
+                    </div>
+
+                    <div class="wildlife-count">
+                        SPECIES PROFILE / <span id="animal-number">01</span>
+                    </div>
+
+                </div>
+
+                <div class="wildlife-list">
+
+                    <p class="selector-label">CHOOSE AN ENCOUNTER</p>
+
+                    <button class="animal-option active"
+                        data-animal="elephant">
+                        <span>01</span>
+                        <strong>Asian Elephant</strong>
+                        <span>↗</span>
+                    </button>
+
+                    <button class="animal-option"
+                        data-animal="leopard">
+                        <span>02</span>
+                        <strong>Snow Leopard</strong>
+                        <span>↗</span>
+                    </button>
+
+                    <button class="animal-option"
+                        data-animal="turtle">
+                        <span>03</span>
+                        <strong>Green Sea Turtle</strong>
+                        <span>↗</span>
+                    </button>
+
+                    <button class="animal-option"
+                        data-animal="orangutan">
+                        <span>04</span>
+                        <strong>Orangutan</strong>
+                        <span>↗</span>
+                    </button>
+
+                    <div class="wildlife-note">
+                        A closer look at the lives we share this planet with.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 06 — THE CONSERVATION MISSION -->
+
+        <section class="mission" id="mission">
+
+            <div class="mission-top">
+
+                <div class="section-index">
+                    <span>04</span>
+                    <span>THE CONSERVATION MISSION</span>
+                </div>
+
+                <p>
+                    Understanding the natural world is the first
+                    step toward protecting it.
+                </p>
+
+            </div>
+
+            <h2>
+                Protect the<br>
+                <em>things that matter.</em>
+            </h2>
+
+            <div class="mission-grid">
+
+                <div class="mission-image"></div>
+
+                <div class="mission-content">
+
+                    <p class="eyebrow">THE LIVING WORLD NEEDS US</p>
+
+                    <h3>
+                        Preservation is<br>
+                        a shared responsibility.
+                    </h3>
+
+                    <p>
+                        Conservation is not only about protecting
+                        distant wilderness. It begins with how we
+                        use resources, how we treat wildlife, and
+                        how we value the ecosystems around us.
+                    </p>
+
+                    <a href="#explore" class="mission-link">
+                        Discover your next step <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="impact-strip">
+
+                <div class="impact-item">
+                    <span class="impact-number" data-count="71">0</span>
+                    <span class="impact-unit">%</span>
+                    <p>Illustrative forest coverage index</p>
+                </div>
+
+                <div class="impact-item">
+                    <span class="impact-number" data-count="84">0</span>
+                    <span class="impact-unit">%</span>
+                    <p>Illustrative freshwater awareness index</p>
+                </div>
+
+                <div class="impact-item">
+                    <span class="impact-number" data-count="62">0</span>
+                    <span class="impact-unit">%</span>
+                    <p>Illustrative wildlife protection index</p>
+                </div>
+
+                <p class="impact-disclaimer">
+                    Concept demonstration figures — not real environmental statistics.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- 07 — FINAL IMMERSIVE EXPERIENCE -->
+
+        <section class="final-world" id="explore">
+
+            <div class="final-world-image"></div>
+            <div class="final-world-shade"></div>
+
+            <div class="final-world-content">
+
+                <span class="eyebrow">
+                    THE JOURNEY NEVER ENDS
+                </span>
+
+                <h2>
+                    Stay curious.<br>
+                    <em>Stay wild.</em>
+                </h2>
+
+                <p>
+                    There is always another forest to discover,
+                    another river to follow, another life to understand.
+                </p>
+
+                <a href="../contact/index.html" class="wildroot-contact-btn">
+                    Start a Conversation <span>↗</span>
+                </a>
+            </div>
+
+            <div class="final-world-footer">
+                <span>WILDROOT / INTO THE LIVING WORLD</span>
+                <span>EXPLORE · OBSERVE · PROTECT</span>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            WILD<span>ROOT</span>
+            <small>INTO THE LIVING WORLD</small>
+        </a>
+
+        <p>THE PLANET IS NOT OURS ALONE.</p>
+
+        <a href="../../index.html" class="footer-back">
+            ← CREATIVEWEB PORTFOLIO
+        </a>
+
+        <span class="footer-copy">
+            © 2026 WILDROOT / CONCEPT PROJECT
+        </span>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
